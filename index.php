@@ -19,11 +19,11 @@
             <?php } ?>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="nome" class="form-control" id="nome" name="nome" placeholder="Digite um nome">
+                <input type="nome" class="form-control" id="nome" name="nome" value="<?php if(isset($_GET['nome'])) echo($_GET['nome']);?>" placeholder="Digite um nome">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Digite o email">
+                <input type="email" class="form-control" id="email" name="email" value="<?php if(isset($_GET['email'])) echo($_GET['email']);?>" placeholder="Digite o email">
             </div>
             <button type="submit" class="btn btn-primary" name="criar">Criar</button>
         </form>
