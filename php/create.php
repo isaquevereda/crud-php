@@ -11,7 +11,7 @@ if (isset($_POST['criar'])){
     $nome = validate($_POST['nome']);
     $email = validate($_POST['email']);
     
-    $user_data = 'nome'.$nome.'&email=' .$email;
+    $user_data = 'nome='.$nome.'&email='.$email;
 
     if (empty($nome)){
         header("Location: ../index.php?error=Nome é necessário&$user_data");
@@ -22,9 +22,9 @@ if (isset($_POST['criar'])){
                 VALUES('$nome', '$email')";
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "sucesso";
+            header("Location: ../read.php?success=Criado com sucesso");
         } else {
-            header("Location: ../index.php?error=unknown error occurred&$user_data");
+            header("Location: ../index.php?error=Ocorreu um erro&$user_data");
         }
     }
 }

@@ -26,6 +26,7 @@
                 <input type="email" class="form-control" id="email" name="email" value="<?php if(isset($_GET['email'])) echo($_GET['email']);?>" placeholder="Digite o email">
             </div>
             <button type="submit" class="btn btn-primary" name="criar">Criar</button>
+            <a href="read.php" class="link-primary">Usuários</a>
         </form>
     </div>
     
