@@ -38,7 +38,10 @@
                             <th scope="row"><?=$i?></th>
                             <td><?=$rows['nome']?></td>
                             <td><?=$rows['email']?></td>
-                            <td><a href="update.php?id=<?=$rows['id']?>" class="btn btn-success"><i class="bi bi-pen"></i> Editar</a></td>
+                            <td>
+                                <a href="update.php?id=<?=$rows['id']?>" class="btn btn-success"><i class="bi bi-pen"></i> Editar</a>
+                                <a href="php/delete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="bi bi-trash"></i> Excluir</a>
+                            </td>
                         </tr>
                         <?php }?>
                     </tbody>
